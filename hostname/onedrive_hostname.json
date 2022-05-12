@@ -1,0 +1,33 @@
+{
+    "dnsname": "onedrive",
+    "hostname": [
+        "contentstorage.osi.office.net",
+        "onedrive.live.com",
+        "login.live.com",
+        "skyapi.onedrive.live.com",
+        "d.docs.live.net",
+        "contentsync.onenote.com",
+        "hierarchyapi.onenote.com",
+        "ocws.officeapps.live.com",
+        "www.onenote.com",
+        "config.edge.skype.com",
+        "roaming.officeapps.live.com",
+        "pagecontentsync.onenote.com",
+        "api.onedrive.live.com",
+        "c1-onenote-15.cdn.office.net",
+        "docs.live.net",
+        "storage.live.com",
+        "skydrive.wns.windows.com",
+        "client.wns.windows.com",
+        "mobile.pipe.aria.microsoft.com",
+        "oneclient.sfx.ms",
+        "skydrivesync.policies.live.net",
+        "api.onedrive.com",
+        "public.bn.files.1drv.com",
+        "public.dm.files.1drv.com",
+        "cdn.onenote.net",
+        "ad.atdmt.com",
+        "officeimg.vo.msecnd.net",
+        "onenote.officeapps.live.com"
+    ]
+}

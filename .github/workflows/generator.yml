@@ -1,0 +1,60 @@
+name: Generator Hosts
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 20 * * *"
+
+jobs:
+  start_run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Codes
+        uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: "3.6"
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Start Generate
+        run: python main.py
+      - name: Start README
+        run: python readme.py
+      - name: Setup Tag
+        run: |
+         echo "tagname=$(date +'%y.%m.%d.%H%M%S')" >> $GITHUB_ENV
+      - name: Update Hosts
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add .
+            git commit -m "update hosts $(date +'%B %d, %Y %T (%Z)')"
+            git tag ${{ env.tagname }}
+            git push origin $(git branch --show-current)
+            git push origin --tags
+          else
+            echo "Oops, seems push failed!"
+            exit 1
+          fi
+      - name: Pack DNS
+        run: |
+          zip dns.zip dns/*
+      - name: Post Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ env.tagname }}
+          files: |
+            dns.zip
+      - name: Sync Gitee
+        uses: Yikun/hub-mirror-action@master
+        with:
+          src: github/caibingcheng
+          dst: gitee/caibingcheng
+          force_update: true
+          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+          dst_token: ${{ secrets.GITEE_TOKEN }}
+          static_list: "hosts"
