@@ -3,7 +3,7 @@ name: Generator Hosts
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 20 * * *"
+    - cron: "0 */2 * * *"
 
 jobs:
   start_run:
@@ -23,9 +23,6 @@ jobs:
         run: python main.py
       - name: Start README
         run: python readme.py
-      - name: Setup Tag
-        run: |
-         echo "tagname=$(date +'%y.%m.%d.%H%M%S')" >> $GITHUB_ENV
       - name: Update Hosts
         run: |
           git config --local user.email "actions@github.com"
@@ -33,22 +30,25 @@ jobs:
           if [ -n "$(git status --porcelain)" ]; then
             git add .
             git commit -m "update hosts $(date +'%B %d, %Y %T (%Z)')"
-            git tag ${{ env.tagname }}
             git push origin $(git branch --show-current)
-            git push origin --tags
           else
             echo "Oops, seems push failed!"
             exit 1
           fi
-      - name: Pack DNS
-        run: |
-          zip dns.zip dns/*
-      - name: Post Release
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: ${{ env.tagname }}
-          files: |
-            dns.zip
+      # - name: Setup Tag
+      #   run: |
+      #     echo "tagname=$(date +'%y.%m.%d.%H%M%S')" >> $GITHUB_ENV
+      #     git tag ${{ env.tagname }}
+      #     git push origin --tags
+      # - name: Pack DNS
+      #   run: |
+      #     zip dns.zip dns/*
+      # - name: Post Release
+      #   uses: softprops/action-gh-release@v1
+      #   with:
+      #     tag_name: ${{ env.tagname }}
+      #     files: |
+      #       dns.zip
       - name: Sync Gitee
         uses: Yikun/hub-mirror-action@master
         with:
