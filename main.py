@@ -2,6 +2,7 @@
 # _*_coding:utf-8_*_
 import os
 import json
+import time
 import dns.resolver
 
 
@@ -9,7 +10,7 @@ def get(dnsname, hostname):
     hostcontent = []
     for domain in hostname:
         try:
-            A = dns.resolver.query(domain, 'A')
+            A = dns.resolver.resolve(domain, 'A')
             for i in A.response.answer:
                 for j in i.items:
                     if isinstance(j, dns.rdtypes.IN.A.A):
@@ -24,10 +25,10 @@ def dump(dnsname, hostcontent):
     curdir = os.getcwd()
     dumpath = os.path.join(curdir, 'dns', dnsname)
     with open(dumpath, 'w') as f:
-        f.write('{} HOST {} START {}\n'.format('#'*10, dnsname, '#'*10))
+        f.write('{} HOST {} START ({}) {}\n'.format('#'*10, dnsname, time.asctime(), '#'*10))
         f.writelines(['{} {}\n'.format(ip, domain)
                       for ip, domain in hostcontent])
-        f.write('{} HOST {}   END {}\n'.format('#'*10, dnsname, '#'*10))
+        f.write('{} HOST {} END {}\n'.format('#'*10, dnsname, '#'*10))
 
 
 def hosts():
