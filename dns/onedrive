@@ -1,19 +1,19 @@
-########## HOST onedrive START (Sun Sep 10 06:15:41 2023) ##########
+########## HOST onedrive START (Sun Sep 10 08:15:01 2023) ##########
 23.66.200.157 contentstorage.osi.office.net
 13.107.42.13 onedrive.live.com
-20.190.151.68 login.live.com
-20.190.151.131 login.live.com
-20.190.151.134 login.live.com
-20.190.151.9 login.live.com
+20.190.151.132 login.live.com
+20.190.151.69 login.live.com
 20.190.151.7 login.live.com
-20.190.151.8 login.live.com
+20.190.151.133 login.live.com
+20.190.151.131 login.live.com
 20.190.151.70 login.live.com
-20.190.151.67 login.live.com
-40.79.207.82 skyapi.onedrive.live.com
+20.190.151.134 login.live.com
+20.190.151.6 login.live.com
+20.135.4.164 skyapi.onedrive.live.com
 13.107.42.12 d.docs.live.net
-52.109.12.76 contentsync.onenote.com
-52.109.13.96 hierarchyapi.onenote.com
-52.109.6.26 ocws.officeapps.live.com
+52.109.13.16 contentsync.onenote.com
+52.109.13.94 hierarchyapi.onenote.com
+52.109.8.43 ocws.officeapps.live.com
 52.109.13.55 www.onenote.com
 13.107.42.16 config.edge.skype.com
 52.109.16.111 roaming.officeapps.live.com
@@ -21,17 +21,17 @@
 104.71.185.235 api.onedrive.live.com
 23.62.165.215 c1-onenote-15.cdn.office.net
 13.107.42.12 docs.live.net
-13.105.74.49 storage.live.com
-20.7.2.167 skydrive.wns.windows.com
-20.7.2.167 client.wns.windows.com
-20.189.173.5 mobile.pipe.aria.microsoft.com
+40.90.130.194 storage.live.com
+20.7.1.246 skydrive.wns.windows.com
+20.7.1.246 client.wns.windows.com
+20.189.173.11 mobile.pipe.aria.microsoft.com
 23.62.165.48 oneclient.sfx.ms
-40.79.207.82 skydrivesync.policies.live.net
+40.90.133.99 skydrivesync.policies.live.net
 13.107.42.12 api.onedrive.com
 13.107.42.12 public.bn.files.1drv.com
 13.107.42.12 public.dm.files.1drv.com
 23.66.228.68 cdn.onenote.net
 152.199.4.33 officeimg.vo.msecnd.net
-52.108.8.12 onenote.officeapps.live.com
 52.108.9.12 onenote.officeapps.live.com
+52.108.8.12 onenote.officeapps.live.com
 ########## HOST onedrive END ##########
