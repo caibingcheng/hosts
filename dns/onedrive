@@ -1,20 +1,20 @@
-########## HOST onedrive START (Sat Jul 13 22:12:44 2024) ##########
+########## HOST onedrive START (Sun Jul 14 01:13:12 2024) ##########
 23.0.244.161 contentstorage.osi.office.net
 13.107.139.11 onedrive.live.com
 13.107.137.11 onedrive.live.com
-20.190.151.67 login.live.com
-20.190.151.69 login.live.com
-20.190.151.8 login.live.com
-20.190.151.9 login.live.com
-20.190.151.132 login.live.com
-20.190.151.134 login.live.com
-20.190.151.70 login.live.com
-20.190.151.131 login.live.com
-40.90.130.199 skyapi.onedrive.live.com
+20.190.190.194 login.live.com
+20.190.190.195 login.live.com
+40.126.62.130 login.live.com
+20.190.190.130 login.live.com
+40.126.62.129 login.live.com
+20.190.190.129 login.live.com
+20.190.190.132 login.live.com
+40.126.62.131 login.live.com
+40.90.130.192 skyapi.onedrive.live.com
 13.107.42.12 d.docs.live.net
-52.109.13.15 contentsync.onenote.com
-52.109.12.101 hierarchyapi.onenote.com
-52.109.8.44 ocws.officeapps.live.com
+52.109.13.71 contentsync.onenote.com
+52.109.12.61 hierarchyapi.onenote.com
+52.109.16.96 ocws.officeapps.live.com
 13.107.246.40 www.onenote.com
 13.107.42.16 config.edge.skype.com
 52.109.16.112 roaming.officeapps.live.com
@@ -22,17 +22,17 @@
 23.9.161.55 api.onedrive.live.com
 23.9.187.84 c1-onenote-15.cdn.office.net
 13.107.42.12 docs.live.net
-13.105.28.3 storage.live.com
-20.7.1.246 skydrive.wns.windows.com
-20.7.1.246 client.wns.windows.com
-20.189.173.25 mobile.pipe.aria.microsoft.com
+20.135.4.169 storage.live.com
+20.7.2.167 skydrive.wns.windows.com
+20.7.2.167 client.wns.windows.com
+20.50.80.213 mobile.pipe.aria.microsoft.com
 23.221.241.133 oneclient.sfx.ms
-40.79.207.80 skydrivesync.policies.live.net
+20.135.17.50 skydrivesync.policies.live.net
 13.107.42.12 api.onedrive.com
 13.107.42.12 public.bn.files.1drv.com
 13.107.42.12 public.dm.files.1drv.com
 23.9.131.101 cdn.onenote.net
 152.199.4.33 officeimg.vo.msecnd.net
-52.108.9.12 onenote.officeapps.live.com
 52.108.8.12 onenote.officeapps.live.com
+52.108.9.12 onenote.officeapps.live.com
 ########## HOST onedrive END ##########
